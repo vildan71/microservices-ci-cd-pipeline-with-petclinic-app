@@ -38,7 +38,7 @@ Resources:
           FromPort: 8082
           ToPort: 8082
           CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
+        - IpProtocol: tcpdev-server-for-
           FromPort: 8083
           ToPort: 8083
           CidrIp: 0.0.0.0/0
@@ -70,7 +70,11 @@ Resources:
     Type: "AWS::EC2::LaunchTemplate"
     Properties:
       LaunchTemplateData:
+<<<<<<< HEAD
         ImageId: ami-038b5c5d2ad6a5090
+=======
+        ImageId: ami-0947d2ba12ee1ff75
+>>>>>>> feature/msp-5
         InstanceType: t2.medium
         KeyName: !Ref KeyPairName
         SecurityGroupIds:

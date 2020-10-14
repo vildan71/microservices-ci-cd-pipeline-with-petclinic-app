@@ -70,11 +70,7 @@ Resources:
     Type: "AWS::EC2::LaunchTemplate"
     Properties:
       LaunchTemplateData:
-<<<<<<< HEAD
-        ImageId: ami-038b5c5d2ad6a5090
-=======
         ImageId: ami-0947d2ba12ee1ff75
->>>>>>> feature/msp-5
         InstanceType: t2.medium
         KeyName: !Ref KeyPairName
         SecurityGroupIds:
@@ -99,9 +95,6 @@ Resources:
             # install Git
             sudo yum install git -y
             cd /home/ec2-user
-            git clone https://github.com/callahan-cw/microservices-ci-cd-pipeline-with-petclinic-app.git
-            git fetch
-            git checkout dev
             git clone https://github.com/vildan71/microservices-ci-cd-pipeline-with-petclinic-app.git
             git fetch
             git checkout dev

@@ -148,7 +148,7 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>                                     
+                    </plugin>
                 </plugins>
             </build>
 
@@ -156,21 +156,6 @@
 
         <profile>
             <id>buildDocker</id>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>com.spotify</groupId>
-                            <artifactId>docker-maven-plugin</artifactId>
-                            <version>${docker.plugin.version}</version>
-                            <executions>
-                                <execution>
-                                    <phase>install</phase>
-                                    <goals>
-                                        <goal>build</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
                             <configuration>
                                 <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
                                 <dockerDirectory>${docker.image.dockerfile.dir}</dockerDirectory>

@@ -1,4 +1,4 @@
-#build-dev-docker-images 
+# build-dev-docker-images
 ./mvnw clean package
 docker build --force-rm -t "petclinic-admin-server:dev" ./spring-petclinic-admin-server
 docker build --force-rm -t "petclinic-api-gateway:dev" ./spring-petclinic-api-gateway
@@ -10,5 +10,3 @@ docker build --force-rm -t "petclinic-vets-service:dev" ./spring-petclinic-vets-
 docker build --force-rm -t "petclinic-visits-service:dev" ./spring-petclinic-visits-service
 docker build --force-rm -t "petclinic-prometheus-server:dev" ./docker/prometheus
 docker build --force-rm -t "petclinic-grafana-server:dev" ./docker/grafana
-
-

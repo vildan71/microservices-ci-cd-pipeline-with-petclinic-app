@@ -26,11 +26,11 @@ spec:
         io.kompose.service: prometheus-server
     spec:
       containers:
-        - image: IMAGE_TAG_PROMETHEUS_SERVICE
-          name: prometheus-server
-          ports:
-            - containerPort: 9090
-          resources: {}
+      - image: IMAGE_TAG_PROMETHEUS_SERVICE
+        name: prometheus-server
+        ports:
+          - containerPort: 9090
+        resources: {}
       initContainers:
       - name: init-discovery-server
         image: busybox

@@ -28,11 +28,11 @@ spec:
         io.kompose.service: vets-service
     spec:
       containers:
-        - image: IMAGE_TAG_VETS_SERVICE
-          name: vets-service
-          ports:
-            - containerPort: 8083
-          resources: {}
+      - image: IMAGE_TAG_VETS_SERVICE
+        name: vets-service
+        ports:
+          - containerPort: 8083
+        resources: {}
       initContainers:
       - name: init-discovery-server
         image: busybox
